@@ -1,5 +1,7 @@
 package pl.mbrzozowski.warmup;
 
+import java.util.ArrayList;
+
 public class WarmupOne {
 
     public boolean in1020(int a, int b) {
@@ -128,6 +130,142 @@ public class WarmupOne {
             return front + str + front;
         }
         return "";
+    }
+
+    public boolean hasTeen(int a, int b, int c) {
+        final int MIN = 13;
+        final int MAX = 19;
+        return (a >= MIN && a <= MAX) || (b >= MIN && b <= MAX) || (c >= MIN && c <= MAX);
+    }
+
+    public boolean loneTeen(int a, int b) {
+        final int MIN = 13;
+        final int MAX = 19;
+        if ((a >= MIN && a <= MAX) && (b < MIN || b > MAX)) {
+            return true;
+        } else return (a < MIN || a > MAX) && (b >= MIN && b <= MAX);
+    }
+
+    public String delDel(String str) {
+        if (str.indexOf("del", 1) == 1) {
+            str = str.replaceFirst("del", "");
+        }
+        return str;
+    }
+
+    public boolean mixStart(String str) {
+        return str.indexOf("ix", 1) == 1;
+    }
+
+    public String startOz(String str) {
+        String result = "";
+        if (str.length() >= 1) {
+            if (str.charAt(0) == 'o') {
+                result += "o";
+            }
+        }
+        if (str.length() >= 2) {
+            if (str.charAt(1) == 'z') {
+                result += "z";
+            }
+        }
+        return result;
+    }
+
+    public int intMax(int a, int b, int c) {
+        int max = Integer.MIN_VALUE;
+        ArrayList<Integer> list = new ArrayList<>();  //Coding bat nie przyjmuje List.of
+        list.add(a);
+        list.add(b);
+        list.add(c);
+        for (Integer integer : list) {
+            if (integer >= max) {
+                max = integer;
+            }
+        }
+        return max;
+    }
+
+    public int close10(int a, int b) {
+        int aDiff = close10CheckInt(a);
+        int bDiff = close10CheckInt(b);
+        if (aDiff < bDiff) {
+            return a;
+        } else if (bDiff < aDiff) {
+            return b;
+        } else {
+            return 0;
+        }
+    }
+
+    private int close10CheckInt(int a) {
+        if (a < 0) {
+            a = Math.abs(a) + 10;
+        } else {
+            a = a - 10;
+            a = Math.abs(a);
+        }
+        return a;
+    }
+
+    public boolean in3050(int a, int b) {
+        return in3050InRange(a, b, 30, 40) || in3050InRange(a, b, 40, 50);
+    }
+
+    private boolean in3050InRange(int a, int b, int rangeMin, int rangeMax) {
+        return (a >= rangeMin && a <= rangeMax) && (b >= rangeMin && b <= rangeMax);
+    }
+
+    public int max1020(int a, int b) {
+        if (max1020IsInRange(a) && max1020IsInRange(b)) {
+            return Math.max(a, b);
+        } else if (max1020IsInRange(a) && !max1020IsInRange(b)) {
+            return a;
+        } else if (max1020IsInRange(b) && !max1020IsInRange(a)) {
+            return b;
+        } else {
+            return 0;
+        }
+    }
+
+    private boolean max1020IsInRange(int a) {
+        return a >= 10 && a <= 20;
+    }
+
+    public boolean stringE(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e') {
+                count++;
+            }
+        }
+        return (count >= 1 && count <= 3);
+    }
+
+    public boolean lastDigit(int a, int b) {
+        return lastDigit(a) == lastDigit(b);
+    }
+
+    private int lastDigit(int a) {
+        return a % 10;
+    }
+
+    public String endUp(String str) {
+        if (str.length() <= 3) {
+            return str.toUpperCase();
+        } else {
+            String stringEnd = str.substring(str.length() - 3).toUpperCase();
+            String result = str.substring(0, str.length() - 3);
+            return result + stringEnd;
+        }
+    }
+
+    public String everyNth(String str, int n) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += n) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
     }
 
 
