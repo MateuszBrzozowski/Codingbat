@@ -60,4 +60,50 @@ public class WarmupTwo {
         return result;
     }
 
+    public int last2(String str) {
+        if (str.length() <= 2) {
+            return 0;
+        }
+        int count = 0;
+        String suffix = str.substring(str.length() - 2);
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 2).equals(suffix)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int arrayCount9(int[] nums) {
+        int count = 0;
+        for (int num : nums) {
+            if (num == 9) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public boolean arrayFront9(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 9) {
+                return true;
+            }
+            if (i == 3) {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public boolean array123(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }
