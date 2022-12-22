@@ -105,5 +105,86 @@ public class WarmupTwo {
         return false;
     }
 
+    public int stringMatch(String a, String b) {
+        int minLength = Math.min(a.length(), b.length());
+        int count = 0;
+        for (int i = 0; i < minLength - 1; i++) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public String stringX(String str) {
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            if ((str.charAt(i) != 'x') || i == 0 || i == str.length() - 1) {
+                result += str.charAt(i);
+            }
+        }
+        return result;
+    }
+
+    public String altPairs(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += 4) {
+            result.append(str.charAt(i));
+            if (i != str.length() - 1) {
+                result.append(str.charAt(i + 1));
+            }
+        }
+        return result.toString();
+    }
+
+    public String stringYak(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            if (stringYakCheck(str.substring(i))) {
+                i += 2;
+            } else {
+                result.append(str.charAt(i));
+            }
+        }
+        return result.toString();
+    }
+
+    private boolean stringYakCheck(String substring) {
+        if (substring.length() >= 3) {
+            return substring.charAt(0) == 'y' && substring.charAt(2) == 'k';
+        } else {
+            return false;
+        }
+    }
+
+    public int array667(int[] nums) {
+        int count = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public boolean noTriples(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i] == nums[i + 2]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean has271(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            int baseInt = nums[i];
+            if (nums[i + 1] == baseInt + 5 && Math.abs(nums[i + 2] - (baseInt - 1)) <= 2) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }
