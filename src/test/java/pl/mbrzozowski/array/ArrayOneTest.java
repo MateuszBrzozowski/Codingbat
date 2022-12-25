@@ -3,8 +3,6 @@ package pl.mbrzozowski.array;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.beans.Transient;
-
 class ArrayOneTest {
 
     private final ArrayOne arrayOne = new ArrayOne();
@@ -14,5 +12,18 @@ class ArrayOneTest {
         int input[] = {1, 2, 6};
         boolean result = arrayOne.firstLast6(input);
         Assertions.assertTrue(result);
+    }
+
+    @Test
+    void midThree() {
+//        System.out.println(5 / 2);
+    }
+
+    @Test
+    void front11() {
+        int[] ints = arrayOne.front11(new int[]{1, 2, 3}, new int[]{7, 8, 8});
+        for (int anInt : ints) {
+            System.out.println(anInt);
+        }
     }
 }
