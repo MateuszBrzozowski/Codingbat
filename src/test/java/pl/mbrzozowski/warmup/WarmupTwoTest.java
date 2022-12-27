@@ -7,7 +7,7 @@ class WarmupTwoTest {
 
     @Test
     void stringMatch() {
-        WarmupTwo warmupTwo = new WarmupTwo();
+        Warmup2 warmupTwo = new Warmup2();
         int result = warmupTwo.stringMatch("abc", "abc");
         Assertions.assertEquals(2, result);
     }

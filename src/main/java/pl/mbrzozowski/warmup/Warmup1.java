@@ -2,7 +2,7 @@ package pl.mbrzozowski.warmup;
 
 import java.util.ArrayList;
 
-public class WarmupOne {
+public class Warmup1 {
 
     public boolean in1020(int a, int b) {
         return (a >= 10 && a <= 20) || (b >= 10 && b <= 20);

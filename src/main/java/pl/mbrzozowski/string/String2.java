@@ -1,6 +1,6 @@
 package pl.mbrzozowski.string;
 
-public class StringTwo {
+public class String2 {
 
     public String doubleChar(String str) {
         StringBuilder result = new StringBuilder();

@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class FunctionalTwo {
+public class Functional2 {
 
-    public FunctionalTwo() {
+    public Functional2() {
     }
 
     public List<Integer> square56(List<Integer> nums) {

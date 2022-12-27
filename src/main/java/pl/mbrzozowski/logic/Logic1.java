@@ -1,6 +1,6 @@
 package pl.mbrzozowski.logic;
 
-public class LogicOne {
+public class Logic1 {
 
     public boolean cigarParty(int cigars, boolean isWeekend) {
         if (isWeekend && cigars >= 40) {

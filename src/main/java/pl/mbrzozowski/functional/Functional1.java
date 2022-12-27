@@ -3,9 +3,9 @@ package pl.mbrzozowski.functional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FunctionalOne {
+public class Functional1 {
 
-    public FunctionalOne() {
+    public Functional1() {
     }
 
     public List<String> noX(List<String> strings) {

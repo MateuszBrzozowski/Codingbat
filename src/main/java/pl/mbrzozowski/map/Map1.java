@@ -2,9 +2,9 @@ package pl.mbrzozowski.map;
 
 import java.util.Map;
 
-public class MapOne {
+public class Map1 {
 
-    public MapOne() {
+    public Map1() {
 
     }
 

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class ArrayOneTest {
 
-    private final ArrayOne arrayOne = new ArrayOne();
+    private final Array1 arrayOne = new Array1();
 
     @Test
     void firstLast6() {

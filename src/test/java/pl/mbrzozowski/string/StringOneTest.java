@@ -7,7 +7,7 @@ class StringOneTest {
 
     @Test
     void endsLy() {
-        StringOne stringOne = new StringOne();
+        String1 stringOne = new String1();
         boolean isEndsLy = stringOne.endsLy("a");
         Assertions.assertFalse(isEndsLy);
     }

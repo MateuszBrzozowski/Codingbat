@@ -2,7 +2,7 @@ package pl.mbrzozowski.array;
 
 import java.util.Arrays;
 
-public class ArrayOne {
+public class Array1 {
 
     public boolean firstLast6(int[] nums) {
         return nums[0] == 6 || nums[nums.length - 1] == 6;

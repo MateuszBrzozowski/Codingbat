@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class WarmupOneTest {
 
-    WarmupOne warmupOne = new WarmupOne();
+    Warmup1 warmupOne = new Warmup1();
 
     @Test
     public void nearHundred_93_true() {

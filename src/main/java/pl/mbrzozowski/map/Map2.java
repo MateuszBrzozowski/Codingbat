@@ -3,9 +3,9 @@ package pl.mbrzozowski.map;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapTwo {
+public class Map2 {
 
-    public MapTwo() {
+    public Map2() {
 //        allSwap(new String[]{"ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"});
         String[] strings = firstSwap(new String[]{"ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"});
         for (String string : strings) {

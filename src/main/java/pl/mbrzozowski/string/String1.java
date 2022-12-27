@@ -1,6 +1,6 @@
 package pl.mbrzozowski.string;
 
-public class StringOne {
+public class String1 {
 
     public String helloName(String name) {
         return "Hello " + name + "!";

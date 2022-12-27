@@ -1,6 +1,6 @@
 package pl.mbrzozowski.warmup;
 
-public class WarmupTwo {
+public class Warmup2 {
 
     public String stringTimes(String str, int n) {
         String pattern = str;
